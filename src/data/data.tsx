@@ -44,8 +44,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Raymond Duong\'s Website',
+  description: "Raymond Duong's Website",
 };
 
 /**
@@ -75,10 +75,10 @@ export const heroData: Hero = {
       <div className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         <p>
           A Canadian-based <strong className="text-stone-100">Full Stack Software Engineer</strong> driven by a passion for innovation and impact.
-          Currently seeking dynamic opportunities to contribute expertise to meaningful projects. 
+          Currently seeking dynamic opportunities to contribute expertise to meaningful projects.
         </p>
         <p>
-          In my free time, you'll find me exploring different countries, playing or training for badminton, 
+          In my free time, you'll find me exploring different countries, playing or training for badminton,
           indulging in horological timepieces, or brewing tea while seeking out the next adventure to embark upon.
         </p>
       </div>
@@ -113,11 +113,11 @@ export const aboutData: About = {
   Outside of work, you'll find me exploring new countries, indulging in horological timepieces, playing and training for badminton, 
   or brewing tea while seeking out the next adventure to embark upon.`,
   aboutItems: [
-    {label: 'Location', text: 'Calgary, AB, Canada', Icon: MapIcon},
-    {label: 'Age', text: '28', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian', Icon: FlagIcon},
-    {label: 'Interests', text: 'Cars, Traveling, Food, Watches', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Calgary', Icon: AcademicCapIcon},
+    { label: 'Location', text: 'Calgary, AB, Canada', Icon: MapIcon },
+    { label: 'Age', text: '28', Icon: CalendarIcon },
+    { label: 'Nationality', text: 'Canadian', Icon: FlagIcon },
+    { label: 'Interests', text: 'Cars, Traveling, Food, Watches', Icon: SparklesIcon },
+    { label: 'Study', text: 'University of Calgary', Icon: AcademicCapIcon },
     // {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
   ],
 };
@@ -151,6 +151,14 @@ export const skills: SkillGroup[] = [
         level: 9,
       },
       {
+        name: 'Next.js',
+        level: 7,
+      },
+      {
+        name: 'Express.js',
+        level: 7,
+      },
+      {
         name: 'JavaScript',
         level: 9,
       },
@@ -174,6 +182,14 @@ export const skills: SkillGroup[] = [
       {
         name: 'Python',
         level: 6,
+      },
+      {
+        name: 'NoSQL (MongoDB)',
+        level: 7,
+      },
+      {
+        name: 'SQL',
+        level: 5,
       },
     ],
   },
@@ -290,10 +306,10 @@ export const experience: TimelineItem[] = [
         <li>
           Stack: TypeScript, JavaScript, React, Node, Java, Python, Microsoft SQL Server, Git, CI/CD, ExpressJS
         </li>
-          - Revamped legacy codebase with ReactJS, boosting customer satisfaction by 20% through improved user experience, responsiveness, and functionality.
+        - Revamped legacy codebase with ReactJS, boosting customer satisfaction by 20% through improved user experience, responsiveness, and functionality.
         <li>
           - Led the successful migration to Simility’s fraud detection APIs, reducing fraudulent transactions by 12% and safeguarding over $100 million in assets.
-        </li>        
+        </li>
         <li>
           - Maintained a code testing coverage of 90% or higher using Jest, JUnit, and React Testing Library, ensuring software reliability and minimizing bugs in production.
         </li>
@@ -318,10 +334,10 @@ export const experience: TimelineItem[] = [
         <li>
           Stack: JavaScript, React, Node, Java, Python, MongoDB, Git, CI/CD Pipelines
         </li>
-          - Enabled secure transactions for over 100,000 users and surpassed $100 million by integrating Interac e-Transfer, enhancing platform functionality, security, and user trust.
+        - Enabled secure transactions for over 100,000 users and surpassed $100 million by integrating Interac e-Transfer, enhancing platform functionality, security, and user trust.
         <li>
           - Engineered a push and email notification backend microservice (Java, NodeJS, Spring Boot, MongoDB), boosting user engagement, account security, and platform robustness.
-        </li>        
+        </li>
         <li>
           - Developed the "Friends With Benefits" feature, driving significant customer acquisition by attracting new users and expanding the user base.
         </li>
@@ -346,10 +362,10 @@ export const experience: TimelineItem[] = [
         <li>
           Stack: JavaScript, Angular, Bash/Shell, Python, Git, Docker
         </li>
-          - Implemented innovative automated testing designs using Pytest, accelerating the testing process and facilitating faster identification and resolution of software defects.
+        - Implemented innovative automated testing designs using Pytest, accelerating the testing process and facilitating faster identification and resolution of software defects.
         <li>
           - Created a comprehensive on-site setup manual, saving each of the 30+ clients an estimated $10,000 by reducing reliance on costly onsite support and ensuring efficient onboarding.
-        </li>        
+        </li>
         <li>
           - Streamlined manual testing procedures, increasing release testing efficiency by 20% which resulted in reducing the man hours required per release by 10%.
         </li>
@@ -420,9 +436,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/iiraay'},
+  { label: 'Github', Icon: GithubIcon, href: 'https://github.com/iiraay' },
   // {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/duongraymond/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/iiraay/'},
+  { label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/duongraymond/' },
+  { label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/iiraay/' },
   // {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
 ];
