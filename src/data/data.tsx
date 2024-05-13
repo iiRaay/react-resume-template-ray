@@ -113,11 +113,11 @@ export const aboutData: About = {
   Outside of work, you'll find me exploring new countries, indulging in horological timepieces, playing and training for badminton, 
   or brewing tea while seeking out the next adventure to embark upon.`,
   aboutItems: [
-    { label: 'Location', text: 'Calgary, AB, Canada', Icon: MapIcon },
-    { label: 'Age', text: '28', Icon: CalendarIcon },
-    { label: 'Nationality', text: 'Canadian', Icon: FlagIcon },
-    { label: 'Interests', text: 'Cars, Traveling, Food, Watches', Icon: SparklesIcon },
-    { label: 'Study', text: 'University of Calgary', Icon: AcademicCapIcon },
+    {label: 'Location', text: 'Calgary, AB, Canada', Icon: MapIcon},
+    {label: 'Age', text: '28', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Canadian', Icon: FlagIcon},
+    {label: 'Interests', text: 'Cars, Traveling, Food, Watches', Icon: SparklesIcon},
+    {label: 'Study', text: 'University of Calgary', Icon: AcademicCapIcon},
     // {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
   ],
 };
@@ -436,9 +436,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  { label: 'Github', Icon: GithubIcon, href: 'https://github.com/iiraay' },
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/iiraay'},
   // {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  { label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/duongraymond/' },
-  { label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/iiraay/' },
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/duongraymond/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/iiraay/'},
   // {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
 ];
