@@ -1,4 +1,5 @@
 import {FC, memo, useCallback, useMemo, useState} from 'react';
+import sendgrid from "@sendgrid/mail";
 
 interface FormData {
   name: string;
@@ -36,6 +37,8 @@ const ContactForm: FC = memo(() => {
        * This is a good starting point to wire up your form submission logic
        * */
       console.log('Data to send: ', data);
+      // THIS IS WHERE I SHOULD CALL THE SENDGRID FUNCTION WITH MY API?
+      // process.env.SENDGRID_API_URL;
     },
     [data],
   );
