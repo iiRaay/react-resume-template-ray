@@ -54,6 +54,7 @@
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
     "sass": "^1.64.2",
+    "sendgrid": "^5.2.3",
     "sort-package-json": "^2.5.1",
     "stylelint": "^15.10.2",
     "stylelint-config-recommended": "^13.0.0",

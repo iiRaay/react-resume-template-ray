@@ -48,6 +48,7 @@ const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null
               section={section}
             />
           ))}
+          <div className="flex justify-right gap-x-8"> put the connect button wallet here</div>
         </nav>
       </header>
     );

@@ -1,5 +1,4 @@
 import {FC, memo, useCallback, useMemo, useState} from 'react';
-import sendgrid from "@sendgrid/mail";
 
 interface FormData {
   name: string;
@@ -8,7 +7,7 @@ interface FormData {
 }
 
 const ContactForm: FC = memo(() => {
-  const defaultData = useMemo(
+  const defaultData: FormData = useMemo(
     () => ({
       name: '',
       email: '',
@@ -18,29 +17,52 @@ const ContactForm: FC = memo(() => {
   );
 
   const [data, setData] = useState<FormData>(defaultData);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<boolean | null>(null);
 
   const onChange = useCallback(
     <T extends HTMLInputElement | HTMLTextAreaElement>(event: React.ChangeEvent<T>): void => {
       const {name, value} = event.target;
-
-      const fieldData: Partial<FormData> = {[name]: value};
-
-      setData({...data, ...fieldData});
+      setData(prevData => ({...prevData, [name]: value}));
     },
-    [data],
+    [],
   );
 
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      /**
-       * This is a good starting point to wire up your form submission logic
-       * */
-      console.log('Data to send: ', data);
-      // THIS IS WHERE I SHOULD CALL THE SENDGRID FUNCTION WITH MY API?
-      // process.env.SENDGRID_API_URL;
+      setSending(true);
+      setError(null);
+      setSuccess(null);
+
+      try {
+        const response = await fetch('/api/sendGrid', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            to: 'duong334@gmail.com', // Replace with actual recipient's email
+            from: 'duong334@hotmail.com',
+            subject: `New message from contact form from ${data.email}`,
+            text: data.message,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to send email');
+        }
+
+        setSuccess(true);
+        setData(defaultData); // Reset form data on successful submission
+      } catch (error) {
+        setError((error as Error).message);
+      } finally {
+        setSending(false);
+      }
     },
-    [data],
+    [data, defaultData],
   );
 
   const inputClasses =
@@ -48,7 +70,15 @@ const ContactForm: FC = memo(() => {
 
   return (
     <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
-      <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" />
+      <input
+        className={inputClasses}
+        name="name"
+        onChange={onChange}
+        placeholder="Name"
+        required
+        type="text"
+        value={data.name}
+      />
       <input
         autoComplete="email"
         className={inputClasses}
@@ -57,6 +87,7 @@ const ContactForm: FC = memo(() => {
         placeholder="Email"
         required
         type="email"
+        value={data.email}
       />
       <textarea
         className={inputClasses}
@@ -66,13 +97,18 @@ const ContactForm: FC = memo(() => {
         placeholder="Message"
         required
         rows={6}
+        value={data.message}
       />
       <button
         aria-label="Submit contact form"
         className="w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800"
-        type="submit">
-        Send Message
+        disabled={sending}
+        type="submit"
+      >
+        {sending ? 'Sending...' : 'Send Message'}
       </button>
+      {success && <p>Email sent successfully!</p>}
+      {error && <p className="text-red-500">Error: {error}</p>}
     </form>
   );
 });
