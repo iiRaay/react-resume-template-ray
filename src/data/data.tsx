@@ -113,7 +113,7 @@ export const aboutData: About = {
   or brewing tea while seeking out the next adventure to embark upon.`,
   aboutItems: [
     {label: 'Location', text: 'Calgary, AB, Canada', Icon: MapIcon},
-    {label: 'Age', text: '28', Icon: CalendarIcon },
+    {label: 'Age', text: '28', Icon: CalendarIcon},
     {label: 'Nationality', text: 'Canadian', Icon: FlagIcon},
     // { label: 'Interests', text: 'Cars, Traveling, Food, Watches', Icon: SparklesIcon },
     {label: 'Study', text: 'BSc in Computer Science', Icon: AcademicCapIcon},
