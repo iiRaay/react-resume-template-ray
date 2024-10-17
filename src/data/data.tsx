@@ -5,7 +5,6 @@ import {
   CalendarIcon,
   FlagIcon,
   MapIcon,
-  SparklesIcon,
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
@@ -13,7 +12,7 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 // import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 // import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/image.png';
+import heroImage from '../images/black-bg.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -86,7 +85,7 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: '/assets/raymond-duong-resume.pdf',
+      href: '/assets/duong-raymond-resume.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -116,8 +115,8 @@ export const aboutData: About = {
     { label: 'Location', text: 'Calgary, AB, Canada', Icon: MapIcon },
     { label: 'Age', text: '28', Icon: CalendarIcon },
     { label: 'Nationality', text: 'Canadian', Icon: FlagIcon },
-    { label: 'Interests', text: 'Cars, Traveling, Food, Watches', Icon: SparklesIcon },
-    { label: 'Study', text: 'University of Calgary', Icon: AcademicCapIcon },
+    // { label: 'Interests', text: 'Cars, Traveling, Food, Watches', Icon: SparklesIcon },
+    { label: 'Study', text: 'BSc in Computer Science', Icon: AcademicCapIcon },
     // {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
   ],
 };
