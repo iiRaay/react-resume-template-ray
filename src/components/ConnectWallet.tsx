@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useEthers } from "@usedapp/core";
 import { ethers } from "ethers";
 
-
 export const ConnectWallet: React.FC = () => {
     const { activateBrowserWallet, account, deactivate } = useEthers();
     const [balance, setBalance] = useState<string | null>(null);
-    const [loading, setLoading] = useState<boolean>(false); // Loading state for balance fetching
+    const [loading, setLoading] = useState<boolean>(false);
 
     const handleWallet = async () => {
         console.log("Activating Wallet");
@@ -27,15 +26,21 @@ export const ConnectWallet: React.FC = () => {
                 setLoading(true);
                 console.log("Fetching balance for account:", account);
                 try {
-                    const provider = new ethers.providers.Web3Provider(window.ethereum);
-                    const balanceBigNumber = await provider.getBalance(account);
-                    const balanceInEth = ethers.utils.formatEther(balanceBigNumber);
-                    setBalance(balanceInEth.slice(0,5));
+                    // Check if window.ethereum is defined
+                    if (typeof window.ethereum !== 'undefined') {
+                        const provider = new ethers.providers.Web3Provider(window.ethereum);
+                        const balanceBigNumber = await provider.getBalance(account);
+                        const balanceInEth = ethers.utils.formatEther(balanceBigNumber);
+                        setBalance(balanceInEth.slice(0, 5));
+                    } else {
+                        console.error("Ethereum provider not found");
+                        setBalance(null);
+                    }
                 } catch (error) {
                     console.error("Error fetching balance:", error);
-                    setBalance(null); // Reset balance if there's an error
+                    setBalance(null);
                 } finally {
-                    setLoading(false); // Set loading to false once done
+                    setLoading(false);
                 }
             }
         };
@@ -58,7 +63,7 @@ export const ConnectWallet: React.FC = () => {
                         {loading 
                             ? "Loading balance..." 
                             : balance !== null 
-                                ? `${balance}...ETH ` 
+                                ? `${balance} ETH` 
                                 : "Balance not available"} 
                     </span>
                     <span className="text-green-500">
