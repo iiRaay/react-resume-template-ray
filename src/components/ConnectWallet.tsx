@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { useEthers } from "@usedapp/core";
-import { ethers } from "ethers";
+import {useEthers} from "@usedapp/core";
+import {ethers} from "ethers";
+import React, {useEffect, useState} from "react";
 
 export const ConnectWallet: React.FC = () => {
-    const { activateBrowserWallet, account, deactivate } = useEthers();
+    const {activateBrowserWallet, account, deactivate} = useEthers();
     const [balance, setBalance] = useState<string | null>(null);
     const [loading, setLoading] = useState<boolean>(false);
 

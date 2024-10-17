@@ -6,7 +6,7 @@ import {FC, Fragment, memo, useCallback, useMemo, useState} from 'react';
 
 import {SectionId} from '../../data/data';
 import {useNavObserver} from '../../hooks/useNavObserver';
-import { ConnectWallet } from '../ConnectWallet';
+import {ConnectWallet} from '../ConnectWallet';
 
 export const headerID = 'headerNav';
 
