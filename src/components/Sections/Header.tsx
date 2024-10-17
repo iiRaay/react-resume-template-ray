@@ -6,6 +6,7 @@ import {FC, Fragment, memo, useCallback, useMemo, useState} from 'react';
 
 import {SectionId} from '../../data/data';
 import {useNavObserver} from '../../hooks/useNavObserver';
+import { ConnectWallet } from '../ConnectWallet';
 
 export const headerID = 'headerNav';
 
@@ -48,7 +49,7 @@ const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null
               section={section}
             />
           ))}
-          <div className="flex justify-right gap-x-8"> put the connect button wallet here</div>
+          <div className="flex justify-right gap-x-8"><ConnectWallet/></div>
         </nav>
       </header>
     );
