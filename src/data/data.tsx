@@ -112,11 +112,11 @@ export const aboutData: About = {
   Outside of work, you'll find me exploring new countries, indulging in horological timepieces, playing and training for badminton, 
   or brewing tea while seeking out the next adventure to embark upon.`,
   aboutItems: [
-    { label: 'Location', text: 'Calgary, AB, Canada', Icon: MapIcon },
-    { label: 'Age', text: '28', Icon: CalendarIcon },
-    { label: 'Nationality', text: 'Canadian', Icon: FlagIcon },
+    {label: 'Location', text: 'Calgary, AB, Canada', Icon: MapIcon},
+    {label: 'Age', text: '28', Icon: CalendarIcon },
+    {label: 'Nationality', text: 'Canadian', Icon: FlagIcon},
     // { label: 'Interests', text: 'Cars, Traveling, Food, Watches', Icon: SparklesIcon },
-    { label: 'Study', text: 'BSc in Computer Science', Icon: AcademicCapIcon },
+    {label: 'Study', text: 'BSc in Computer Science', Icon: AcademicCapIcon},
     // {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
   ],
 };
@@ -305,21 +305,18 @@ export const experience: TimelineItem[] = [
         <li>
           Stack: TypeScript, JavaScript, React, Node, Java, Python, Microsoft SQL Server, Git, CI/CD, ExpressJS
         </li>
-        - Revamped legacy codebase with ReactJS, boosting customer satisfaction by 20% through improved user experience, responsiveness, and functionality.
+          - Rebuilt the front end of BizBank using React, boosting user experience, responsiveness, and functionality.
         <li>
-          - Led the successful migration to Simility’s fraud detection APIs, reducing fraudulent transactions by 12% and safeguarding over $100 million in assets.
+          - Led the migration of legacy fraud detection to Simility, reducing and preventing fraudulent transactions.
         </li>
         <li>
-          - Maintained a code testing coverage of 90% or higher using Jest, JUnit, and React Testing Library, ensuring software reliability and minimizing bugs in production.
+          - Maintained a code testing coverage of 90% or higher using Jest, JUnit, and React Testing Library, ensuring software reliability, backwards compatibility, and minimizing bugs in production.
         </li>
         <li>
-          - Designed a comprehensive development manual, unifying coding practices and fostering seamless collaboration within a 50+ engineer team.
+          - Designed a comprehensive development manual for 50+ developers, unifying coding and development practices.
         </li>
         <li>
-          - Implemented static application security testing with Veracode into gitlab CI/CD pipelines, achieving a 60% reduction in API exploits and fortifying software security.
-        </li>
-        <li>
-          - Integrated Veracode into the Gitlab CI/CD pipelines which slashed API exploits by 60%, significantly bolstering software security.
+          - Integrated Veracode into GitLab CI/CD pipelines, reducing API exploits by 60% and enhancing software security.
         </li>
       </ul>
     ),
@@ -333,21 +330,18 @@ export const experience: TimelineItem[] = [
         <li>
           Stack: JavaScript, React, Node, Java, Python, MongoDB, Git, CI/CD Pipelines
         </li>
-        - Enabled secure transactions for over 100,000 users and surpassed $100 million by integrating Interac e-Transfer, enhancing platform functionality, security, and user trust.
+          - Integrated Interac e-Transfer into the app with Node, React, and Java, allowing 75k users to transfer over $100M.
         <li>
-          - Engineered a push and email notification backend microservice (Java, NodeJS, Spring Boot, MongoDB), boosting user engagement, account security, and platform robustness.
+          - Built and designed a push and email notification microservice in Java, boosting user engagement and account security.
         </li>
         <li>
-          - Developed the "Friends With Benefits" feature, driving significant customer acquisition by attracting new users and expanding the user base.
+          - Collaborated with local businesses and developed the “Friends With Benefits” feature using Java, Node, React, and MongoDB, driving customer acquisition by 15% and increasing customer spending.
         </li>
         <li>
-          - Architected and developed a Java and React referral program, incentivizing existing users and fueling a 2,500% surge in customer acquisition and retention.
+          - Led the development of a referral program in Java, Node, and React, increasing customer acquisition by 2500%.
         </li>
         <li>
-          - Integrated Mixpanel analytics across front-end and back-end systems, enabling data-driven decisions for more effective feature prioritization.
-        </li>
-        <li>
-          - Designed and implemented various SQL query helper functions to improve code organization and visibility.
+          - Integrated Mixpanel analytics on the frontend and backend, enabling data-driven decisions for feature prioritization.
         </li>
       </ul>
     ),
@@ -361,15 +355,15 @@ export const experience: TimelineItem[] = [
         <li>
           Stack: JavaScript, Angular, Bash/Shell, Python, Git, Docker
         </li>
-        - Implemented innovative automated testing designs using Pytest, accelerating the testing process and facilitating faster identification and resolution of software defects.
+          - Implemented automated testing designs and patterns using Pytest, accelerating the testing process and facilitating faster identification and resolution of software defects.
         <li>
-          - Created a comprehensive on-site setup manual, saving each of the 30+ clients an estimated $10,000 by reducing reliance on costly onsite support and ensuring efficient onboarding.
+          - Authored a comprehensive setup and debugging manual for hospitals running our server on their LAN, reducing the need for costly support visits and streamlining onboarding, saving each client an estimated $10,000.
         </li>
         <li>
-          - Streamlined manual testing procedures, increasing release testing efficiency by 20% which resulted in reducing the man hours required per release by 10%.
+          - Streamlined and optimized manual testing procedures, increasing release testing efficiency by 20% and reducing required man hours by 10% per release.
         </li>
         <li>
-          - Developed a robust internal dashboard using Grafana empowering data-driven decision-making and bug detection and monitoring.
+          - Implemented proactive monitoring and alerting systems with Grafana, resulting in 99.90% uptime and significantly reducing mean time to recovery (MTR) for incidents.
         </li>
       </ul>
     ),
@@ -435,9 +429,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  { label: 'Github', Icon: GithubIcon, href: 'https://github.com/iiraay' },
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/iiraay'},
   // {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  { label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/duongraymond/' },
-  { label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/iiraay/' },
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/duongraymond/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/iiraay/'},
   // {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
 ];
